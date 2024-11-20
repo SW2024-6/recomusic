@@ -26,10 +26,12 @@ class TopController < ApplicationController
     def signup
         uid = params[:uid]
         password = params[:pass]
+        history = params[:history]
+        practice = params[:practice]
         
         ango = BCrypt::Password.create(password)
         
-        User.create(uid: uid, pass: ango)
+        User.create(uid: uid, pass: ango, history: history, practice: practice)
         redirect_to root_path
     end
     
