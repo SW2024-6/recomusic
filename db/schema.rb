@@ -19,5 +19,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_20_064957) do
     t.string "history"
     t.integer "practice"
   end
-
-end
+ActiveRecord::Schema[7.1].define(version: 2024_11_13_072819) do
+  create_table "musics", force: :cascade do |t|
+    t.string "title"
+    t.string "artist"
+    t.integer "difficulty"
+    t.string "genre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
