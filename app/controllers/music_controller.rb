@@ -1,9 +1,6 @@
 class MusicController < ApplicationController
-  def list
+  def index
     @musics = Music.all
   end
 
-  def show
-    
-  end
 end
