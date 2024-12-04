@@ -1,0 +1,90 @@
+/* General body and text styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff; /* White background for a clean look */
+  color: #333333; /* Dark text for readability */
+}
+
+h1, h2 {
+  color: #f57c00; /* Orange color for titles */
+}
+
+/* Header */
+header {
+  background-color: #f57c00; /* Orange background for the header */
+  color: white; /* White text for contrast */
+  padding: 40px 0;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+header p {
+  font-size: 1.25rem;
+}
+
+/* Cards */
+.card {
+  border: none; /* Remove card border */
+  border-radius: 10px; /* Rounded corners for the cards */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+}
+
+.card-body {
+  padding: 20px;
+  background-color: #f8f8f8; /* Light gray background for card body */
+}
+
+.card-title {
+  color: #f57c00; /* Orange color for card titles */
+}
+
+.card-text {
+  color: #666666; /* Slightly darker gray for text */
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #f57c00; /* Orange background for buttons */
+  border-color: #f57c00; /* Orange border */
+  color: white; /* White text for contrast */
+}
+
+.btn-primary:hover {
+  background-color: #ff9100; /* Lighter orange on hover */
+  border-color: #ff9100; /* Lighter border on hover */
+}
+
+/* Footer */
+footer {
+  background-color: #f57c00; /* Orange background for footer */
+  color: white; /* White text for contrast */
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Logout Link */
+#logout-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#logout-link a {
+  color: #f57c00; /* Orange color for logout link */
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+#logout-link a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
