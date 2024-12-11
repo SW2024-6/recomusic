@@ -1,0 +1,13 @@
+<% @users.each do |e| %>
+    <p>
+        ユーザID: <%= e.uid %><br>
+        パスワード :<%= e.pass %><br>
+        楽器歴: <%= e.history %><br>
+        1日の練習時間: <%= e.practice %><br>
+        <%=link_to '削除', "/users/#{e.id}", data: { turbo_method: :delete } %>
+    </p>
+<% end %>
+
+<%= link_to '新規追加', '/users/new' %>
+
+<%= link_to 'ログイン画面に戻る', controller: 'top', action: 'main' %>

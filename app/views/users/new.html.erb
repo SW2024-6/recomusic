@@ -1,0 +1,37 @@
+<h2>新規登録</h2>
+
+<%= form_for @user , url: {action: :create} do |f| %>
+
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h3>以下のエラーがあります:</h3>
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :uid, 'ユーザーID' %>
+  <%= f.text_field :uid %>
+  <br>
+  <br>
+  
+  <%= f.label :pass, 'パスワード' %>
+  <%= f.password_field :pass %>
+  <br>
+  <br>
+  
+  <%= f.label :history, '楽器歴' %>
+  <%= f.text_area :history, placeholder: '例：ピアノ歴5年' %>
+  <br>
+  <br>
+  
+  <%= f.label :practice, '1日の練習時間（時間）' %>
+  <%= f.number_field :practice, min: 0, step: 1 %>
+  <br>
+  <br>
+  
+  <%= f.submit '登録' %>
+<% end %>

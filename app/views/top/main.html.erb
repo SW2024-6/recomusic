@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RECOMUSIC - ベースで弾く楽曲をおすすめするサイト</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <%= csrf_meta_tags %>  <!-- CSRF対策 -->
+</head>
+<body>
+  <div class="container">
+    <!-- ヘッダー -->
+    <header class="my-4">
+      <h1 class="display-4 text-center">RECOMUSIC</h1>
+      <p class="lead text-center">ベースで弾く楽曲をおすすめするサイト</p>
+      <p class="text-center">初心者から上級者まで、あなたにぴったりのベース曲を見つけよう！</p>
+    </header>
+
+
+    <!-- メインコンテンツ -->
+    <section class="my-5">
+      <h2 class="text-center">ベース楽曲</h2>
+      <p class="text-center">ここでは、ベース初心者から上級者まで楽しめる楽曲を紹介しています。自分のレベルに合った曲を見つけて、練習してみましょう！</p>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+
+            <div class="card-body">
+              <h5 class="card-title">難易度★</h5>
+              <p class="card-text">この曲は初心者にもやさしいベースラインです。リズムを覚えるのに最適です。</p>
+              <a href="#" class="btn btn-primary">詳細を見る</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card">
+
+            <div class="card-body">
+              <h5 class="card-title">難易度★★</h5>
+              <p class="card-text">少しテクニックが必要な楽曲。リズムとフレーズをうまく絡める練習になります。</p>
+              <a href="#" class="btn btn-primary">詳細を見る</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card">
+
+            <div class="card-body">
+              <h5 class="card-title">難易度★★★</h5>
+              <p class="card-text">高度なテクニックが求められる楽曲。脱初心者の楽曲です。</p>
+              <a href="#" class="btn btn-primary">詳細を見る</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card">
+
+            <div class="card-body">
+              <h5 class="card-title">難易度★★★★</h5>
+              <p class="card-text">高度なリズムとテクニックが必要な楽曲。さらなるスキルアップにつながります。</p>
+              <a href="#" class="btn btn-primary">詳細を見る</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card">
+
+            <div class="card-body">
+              <h5 class="card-title">難易度★★★★★</h5>
+              <p class="card-text">最上位なテクニックが求められる楽曲。プロでも苦戦する楽曲です。</p>
+              <a href="#" class="btn btn-primary">詳細を見る</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="text-center mt-5">
+      <p>&copy; 2024 RECOMUSIC. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- 必要なJSファイル -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+<p>
+<%= link_to 'ログアウト', top_logout_path %>
+</p>
