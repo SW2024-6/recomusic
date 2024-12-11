@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :users
   resources :top , except: [:show]
   resources :likes
-  resources :music
+  resources :musics
   root 'top#main'
   get 'top/main'
   post 'top/login'

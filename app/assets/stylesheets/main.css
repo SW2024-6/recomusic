@@ -88,3 +88,22 @@ footer p {
 #logout-link a:hover {
   text-decoration: underline; /* Underline on hover */
 }
+
+/* Table Decoration */
+table{
+  border-spacing: 0;
+  border: none;
+}
+
+table tr:nth-child(even) {
+  background-color: #eee;
+}
+
+td { 
+ padding: 2px 2px 2px 10px;
+ vertical-align: top;
+}
+
+table {
+  width: 800px;
+}

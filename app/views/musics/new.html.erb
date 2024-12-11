@@ -1,0 +1,11 @@
+<%= form_with model: @music do |f| %>
+    <%= f.label :title, 'タイトル' %>
+    <%= f.text_field :title %>
+    <%= f.label :artist, 'アーティスト' %>
+    <%= f.text_field :artist %>
+    <%= f.label :difficulty, '難易度' %>
+    <%= f.number_field :difficulty, min: 0, step: 1 %>
+    <%= f.label :genre, 'ジャンル' %>
+    <%= f.text_field :genre %>
+    <%= f.submit '楽曲追加' %>
+<% end %>

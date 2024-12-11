@@ -1,0 +1,18 @@
+<h1> 楽曲一覧 </h1>
+<%= link_to '新規追加', new_music_path %>
+<table align="center">
+    <tr>
+      <th>タイトル</th>
+      <th>アーティスト</th>
+      <th>難易度</th>
+      <th>ジャンル</th>
+    </tr>
+<% @musics.each do |m| %>
+     <tr>
+         <td class="title"><%= m.title %></td>
+         <td class="artist"><%= m.artist %></td>
+         <td class="difficulty" align="center"><%= m.difficulty %></td>
+         <td class="genre"><%= m.genre %></td>
+     </tr>
+<% end %>
+</table>
