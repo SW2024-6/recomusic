@@ -1,0 +1,92 @@
+/* General reset and body styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff; /* White background */
+  color: #333333; /* Dark text for readability */
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stacks elements vertically */
+  justify-content: flex-start; /* Align items at the top */
+  align-items: center; /* Horizontally center the content */
+  height: 100vh;
+}
+
+/* Container for the login form */
+h2 {
+  text-align: center;
+  color: #f57c00; /* Orange color for the title */
+  margin-bottom: 20px;
+}
+
+/* Form container styling */
+form {
+  background-color: #f0f0f0; /* Light gray background for the form */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin-top: 50px; /* Adds space from the top */
+}
+
+/* Label and input field styles */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #f57c00; /* Orange color for labels */
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #f57c00; /* Orange focus border */
+}
+
+/* Submit button style */
+input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #f57c00; /* Orange background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #ff9100; /* Lighter orange on hover */
+}
+
+/* Links for signup and registration list */
+#signup-form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#signup-form a {
+  color: #f57c00; /* Orange color for links */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#signup-form a:hover {
+  text-decoration: underline; /* Underline on hover for links */
+}

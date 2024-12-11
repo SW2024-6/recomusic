@@ -1,0 +1,34 @@
+<% if @user.errors.present? %>
+<h3>エラーがあります。</h3>
+<ul>
+  <% @user.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+
+
+<%= form_with url: '/top/signup', method: :post, local: true do |f| %>
+  <h3>新規登録</h3>
+  
+  <%= f.label :uid, 'ユーザーID' %>
+  <%= f.text_field :uid %>
+  <br>
+  <br>
+  <%= f.label :pass, 'パスワード' %>
+  <%= f.password_field :pass %>
+  <br>
+  <br>
+  <%= f.label :history, '楽器歴' %>
+  <%= f.text_area :history, placeholder: '例：ピアノ歴5年' %>
+  <br>
+  <br>
+  <%= f.label :practice, '1日の練習時間（時間）' %>
+  <%= f.number_field :practice, min: 0, step: 1 %>
+  <br>
+  <br>
+  <%= f.submit '登録' %>
+<% end %>
+<br>
+<br>
+<%= link_to '戻る', top_logout_path %>
