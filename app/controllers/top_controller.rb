@@ -31,11 +31,16 @@ class TopController < ApplicationController
         
         ango = BCrypt::Password.create(password)
         
-        User.create(uid: uid, pass: ango, history: history, practice: practice)
-        redirect_to root_path
+        @user = User.create(uid: uid, pass: ango, history: history, practice: practice)
+        if @user.save
+            redirect_to root_path
+        else
+            render 'signup', status: :unprocessable_entity
+        end
     end
     
     def signup_page
+        @user = User.new
         render "signup"
     end
 end

@@ -13,10 +13,12 @@ class UsersController < ApplicationController
     if User.exists?(uid: params[:user][:uid])
       render 'error',status: 422
     else
-      user = User.new(uid: params[:user][:uid], pass: user_pass)
-      user.save
-      #redirect_to '/'
-      redirect_to top_main_path
+      @user = User.new(uid: params[:user][:uid], pass: user_pass)
+      if @user.save
+        redirect_to top_main_path
+      else
+        render 'new', status: :unprocessable_entity
+      end
     end
   end
   
