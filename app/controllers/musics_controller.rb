@@ -19,4 +19,8 @@ class MusicsController < ApplicationController
         m.save
         redirect_to musics_path
     end
+
+    def show
+        @music = Music.find(params[:id])
+    end
 end
