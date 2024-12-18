@@ -5,3 +5,5 @@
     難易度：<%= @music.difficulty %><br>
     ジャンル：<%= @music.genre %>
 </p>
+
+<%= link_to '戻る', musics_path(difficulty: @music.difficulty) %>
