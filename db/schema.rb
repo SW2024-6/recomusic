@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_01_12_073220) do
+ActiveRecord::Schema[7.1].define(version: 2025_01_13_175644) do
   create_table "comments", force: :cascade do |t|
     t.string "title"
     t.text "body"
     t.integer "my_difficulty"
     t.integer "user_id"
     t.integer "music_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "links", force: :cascade do |t|
+    t.integer "music_id"
+    t.string "video_url"
+    t.string "score_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
