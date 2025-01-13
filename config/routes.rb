@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'links/new'
   get 'top/index'
   get 'top/new'
   get 'tops/index'

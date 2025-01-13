@@ -1,17 +1,24 @@
-<h2>楽曲詳細</h2>
-<p><%= @music.title %></p>
-<p><%= @music.artist %></p>
-<p><%= @music.difficulty %></p>
-<p><%= @music.genre %></p>
+<div class="music-details">
+  <div class="music-info">
+    <h2>楽曲詳細</h2>
+    <p><strong>タイトル:</strong> <%= @music.title %></p>
+    <p><strong>アーティスト:</strong> <%= @music.artist %></p>
+    <p><strong>難易度:</strong> <%= @music.difficulty %></p>
+    <p><strong>ジャンル:</strong> <%= @music.genre %></p>
+  </div>
+  <div class="music-links">
+  </div>
+</div>
 
-<h3>コメント</h3>
-<%= link_to "コメントを追加", new_comment_path(music_id: @music.id) %>
-<% @comments.each do |c| %>
-  <p>
-    <p><%= c.title %></p>
-    <p><%= c.body %></p>
-    <p><%= c.my_difficulty %></p>
-    <p><%= c.user.uid %></p>
-  </p>
-  <br>
-<% end %>
+<div class="comments-section">
+  <h3>コメント</h3>
+  <%= link_to "コメントを追加", new_comment_path(music_id: @music.id) %>
+  <% @comments.each do |c| %>
+    <div class="comment">
+      <p><strong>タイトル:</strong> <%= c.title %></p>
+      <p><strong>本文:</strong> <%= c.body %></p>
+      <p><strong>難易度:</strong> <%= c.my_difficulty %></p>
+      <p><strong>ユーザー:</strong> <%= c.user.uid %></p>
+    </div>
+  <% end %>
+</div>

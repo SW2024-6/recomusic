@@ -15,8 +15,14 @@
 /* General body and text styles */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #ffffff; /* White background for a clean look */
+  background-color: #ffffff; /* White background */
   color: #333333; /* Dark text for readability */
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stacks elements vertically */
+  justify-content: flex-start; /* Align items at the top */
+  align-items: center; /* Horizontally center the content */
+  height: 100vh;
 }
 
 h1, h2 {
@@ -121,3 +127,72 @@ td {
 table {
   width: 800px;
 }
+
+/* Comment Section */
+/* コメントセクション全体 */
+.comments-section {
+  background-color: #fff; /* 白背景 */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%; /* 親要素に合わせる */
+  max-width: 800px; /* 最大幅を設定 */
+  margin: 20px auto; /* 上下中央揃え */
+  box-sizing: border-box; /* パディングとボーダーを幅に含む */
+}
+
+/* 各コメント */
+.comment {
+  background-color: #f8f8f8; /* 各コメントの背景色 */
+  padding: 15px; /* コメント内側の余白 */
+  margin-bottom: 15px; /* コメント間のスペース */
+  border: 1px solid #ddd; /* コメントを囲むボーダー */
+  border-radius: 5px; /* 角を丸める */
+  box-sizing: border-box; /* パディングとボーダーを幅に含む */
+}
+
+/* コメント追加リンク */
+.comments-section a {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #007bff; /* 青色リンク */
+  text-decoration: none;
+}
+
+.comments-section a:hover {
+  text-decoration: underline; /* ホバー時に下線を追加 */
+}
+
+/* 楽曲詳細全体のコンテナ */
+.music-details {
+  background-color: #fff; /* 背景を白に */
+  padding: 20px; /* 内側に余白 */
+  border-radius: 10px; /* 角を丸く */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 影を追加 */
+  margin-bottom: 20px; /* コメントセクションとの間隔を確保 */
+  max-width: 800px; /* 幅を固定 */
+  margin: 0 auto; /* 中央揃え */
+}
+
+/* 見出し */
+.music-details h2 {
+  font-size: 1.8rem; /* 少し大きめのフォントサイズ */
+  color: #f57c00; /* オレンジ色 */
+  margin-bottom: 20px; /* 下に余白 */
+  text-align: center; /* 中央揃え */
+}
+
+/* 楽曲情報リスト */
+.music-details p {
+  font-size: 1rem; /* 標準的なフォントサイズ */
+  margin: 10px 0; /* 各情報の間隔を調整 */
+  line-height: 1.5; /* 行間を広げる */
+  color: #333; /* 落ち着いた濃いグレー */
+}
+
+/* ラベルを強調 */
+.music-details p strong {
+  font-weight: bold;
+  color: #f57c00; /* オレンジ色で強調 */
+}
+
