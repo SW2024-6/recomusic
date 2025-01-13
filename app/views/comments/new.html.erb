@@ -1,0 +1,10 @@
+<%= form_with model: @comment do |c| %>
+    <%= c.label :title, 'タイトル' %>
+    <%= c.text_field :title %>
+    <%= c.label :body, '本文' %>
+    <%= c.text_field :body %>
+    <%= c.label :my_difficulty, '難易度' %>
+    <%= c.number_field :my_difficulty, min: 0, step: 1 %>
+    <%= c.hidden_field :music_id, value: @music_id %>
+    <%= c.submit 'コメント追加' %>
+<% end %>

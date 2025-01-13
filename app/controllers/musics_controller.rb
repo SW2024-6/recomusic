@@ -17,6 +17,11 @@ class MusicsController < ApplicationController
                         difficulty: params[:music][:difficulty],
                         genre: params[:music][:genre])
         m.save
-        redirect_to musics_path
+a       redirect_to musics_path
+    end
+
+    def show
+      @music = Music.find(params[:id])
+      @comments = @music.comments
     end
 end

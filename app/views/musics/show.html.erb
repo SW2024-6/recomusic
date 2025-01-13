@@ -1,0 +1,17 @@
+<h2>楽曲詳細</h2>
+<p><%= @music.title %></p>
+<p><%= @music.artist %></p>
+<p><%= @music.difficulty %></p>
+<p><%= @music.genre %></p>
+
+<h3>コメント</h3>
+<%= link_to "コメントを追加", new_comment_path(music_id: @music.id) %>
+<% @comments.each do |c| %>
+  <p>
+    <p><%= c.title %></p>
+    <p><%= c.body %></p>
+    <p><%= c.my_difficulty %></p>
+    <p><%= c.user.uid %></p>
+  </p>
+  <br>
+<% end %>

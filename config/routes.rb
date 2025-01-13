@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   get 'users/index'
   resources :users
   resources :top , except: [:show]
-  resources :likes
   resources :musics
+  resources :comments
   root 'top#main'
   get 'top/main'
   post 'top/login'

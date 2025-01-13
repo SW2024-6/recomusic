@@ -9,7 +9,7 @@
     </tr>
 <% @musics.each do |m| %>
      <tr>
-         <td class="title"><%= m.title %></td>
+         <td class="title"><%= link_to m.title, music_path(m.id) %></td>
          <td class="artist"><%= m.artist %></td>
          <td class="difficulty" align="center"><%= m.difficulty %></td>
          <td class="genre"><%= m.genre %></td>
