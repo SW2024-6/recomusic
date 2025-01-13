@@ -170,8 +170,11 @@ table {
   border-radius: 10px; /* 角を丸く */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 影を追加 */
   margin-bottom: 20px; /* コメントセクションとの間隔を確保 */
-  max-width: 800px; /* 幅を固定 */
   margin: 0 auto; /* 中央揃え */
+	display: flex;
+	width: 100%;
+	max-width: 800px;
+  box-sizing: border-box; /* パディングとボーダーを幅に含む */
 }
 
 /* 見出し */
@@ -196,3 +199,48 @@ table {
   color: #f57c00; /* オレンジ色で強調 */
 }
 
+.music-info, .music-links {
+	flex: 1;
+}
+
+/* 全体のスタイル */
+.music-links {
+  margin-top: 20px;
+}
+
+/* ボタンの基本スタイル */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px 0; /* ボタン間のスペース */
+  font-size: 14px;
+  text-align: center;
+  color: #fff; /* テキストの色を白 */
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 影を追加 */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+	box-sizing: border-box;
+}
+
+/* ボタンのホバー時のアニメーション */
+.btn:hover {
+  background-color: #333; /* ホバー時の背景色を濃くする */
+  transform: scale(1.05); /* 少し大きくなる */
+}
+
+/* プライマリボタン（動画URL用） */
+.btn-primary {
+  background-color: #f57c00; /* オレンジ色 */
+}
+
+/* セカンダリボタン（スコアURL用） */
+.btn-secondary {
+  background-color: #007bff; /* 青色 */
+}
+
+/* リンクを追加ボタン */
+.btn-add-link {
+	width: 100%;
+  background-color: #000; /* 緑色 */
+}

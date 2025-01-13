@@ -1,2 +1,9 @@
-<h1>Links#new</h1>
-<p>Find me in app/views/links/new.html.erb</p>
+<h1>楽曲関連リンク登録</h1>
+<%= form_with model: @link do |f| %>
+    <%= f.label :video_url, '動画URL' %>
+    <%= f.text_field :video_url %>
+    <%= f.label :score_url, '楽譜URL' %>
+    <%= f.text_field :score_url %>
+    <%= f.hidden_field :music_id, value: @music_id %>
+    <%= f.submit '楽曲追加' %>
+<% end %>

@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'links/new'
   get 'top/index'
   get 'top/new'
   get 'tops/index'
@@ -9,6 +8,7 @@ Rails.application.routes.draw do
   resources :top , except: [:show]
   resources :musics
   resources :comments
+  resources :links
   root 'top#main'
   get 'top/main'
   post 'top/login'

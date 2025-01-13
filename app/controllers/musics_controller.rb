@@ -23,5 +23,6 @@ a       redirect_to musics_path
     def show
       @music = Music.find(params[:id])
       @comments = @music.comments
+      @link = @music.link
     end
 end
