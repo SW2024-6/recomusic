@@ -16,6 +16,12 @@
          <td class="artist"><%= m.artist %></td>
          <td class="difficulty" align="center"><%= m.difficulty %></td>
          <td class="genre"><%= m.genre %></td>
+         <td>
+         <% if current_user&.host? %>
+             <%= link_to "削除", music_path(m.id), {turbo_method: :delete} %>
+         <% end %>
+         </td>
      </tr>
 <% end %>
 </table>
+<%= link_to '前のページに戻る', 'javascript:history.back()' %>

@@ -19,6 +19,8 @@
   </div>
 </div>
 
+<%= link_to '前のページに戻る', 'javascript:history.back()' %>
+
 <div class="comments-section">
   <h3>コメント</h3>
   <%= link_to "コメントを追加", new_comment_path(music_id: @music.id) %>
