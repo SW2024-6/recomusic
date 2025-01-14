@@ -19,7 +19,7 @@
   </div>
 </div>
 
-<%= link_to '前のページに戻る', 'javascript:history.back()' %>
+<%= link_to '楽曲一覧に戻る', musics_path(difficulty: @music.difficulty) %>
 
 <div class="comments-section">
   <h3>コメント</h3>
@@ -33,7 +33,7 @@
       <p class = "my-difficulty">
       マイ難易度：
       <% 5.times do |i| %>
-        <% if i < @music.difficulty %>
+        <% if i < c.my_difficulty %>
           <span class="star-filled">★</span>
         <% else %>
           <span class="star-empty">☆</span>
@@ -43,7 +43,7 @@
       </p>
       <p><%= c.body %></p>
       <% if current_user&.host? %>
-             <%= link_to "削除", comment_path(c), data: { turbo_method: :delete } %>
+        <%= link_to "コメントを削除", comment_path(c), data: { turbo_method: :delete } %>
       <% end %>
     </div>
     
