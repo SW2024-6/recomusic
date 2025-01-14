@@ -1,4 +1,13 @@
 class User < ApplicationRecord
+  # ホストかどうかを判定
+  def host?
+    role == 'host'
+  end
+  
+  def user?
+    role == 'user'
+  end
+  
   validates :uid, presence: true, uniqueness: true
   validates :pass, presence: true, length: { minimum: 6 }
   validates :history, presence: true

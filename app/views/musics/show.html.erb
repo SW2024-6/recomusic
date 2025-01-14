@@ -7,7 +7,9 @@
     <p><strong>ジャンル:</strong> <%= @music.genre %></p>
   </div>
   <div class="music-links">
-    <%= link_to "リンクを追加", new_link_path(music_id: @music.id), class: "btn btn-add-link" %>
+    <% if current_user&.host? %>
+      <%= link_to "リンクを追加", new_link_path(music_id: @music.id), class: "btn btn-add-link" %>
+    <% end %>
     <% if @link&.video_url.present? %>
       <%= link_to "動画を見る", @link.video_url, class: "btn btn-primary", target: "_blank", rel: "noopener" %>
     <% end %>
