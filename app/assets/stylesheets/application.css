@@ -38,6 +38,7 @@ header {
 
 header h1 {
   font-size: 3rem;
+  color: yellow;
 }
 
 header p {
