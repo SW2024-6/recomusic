@@ -8,10 +8,10 @@
   </div>
   <div class="music-links">
     <%= link_to "リンクを追加", new_link_path(music_id: @music.id), class: "btn btn-add-link" %>
-    <% if @link.video_url.present? %>
+    <% if @link&.video_url.present? %>
       <%= link_to "動画を見る", @link.video_url, class: "btn btn-primary", target: "_blank", rel: "noopener" %>
     <% end %>
-    <% if @link.score_url.present? %>
+    <% if @link&.score_url.present? %>
       <%= link_to "スコアを見る", @link.score_url, class: "btn btn-secondary", target: "_blank", rel: "noopener" %>
     <% end %>
   </div>
