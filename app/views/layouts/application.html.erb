@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <% if current_user&.host? %>
+      <h1 style="color: red;background-color: black;">管理者モード</h1>
+    <% end %>
     <%= yield %>
   </body>
 </html>

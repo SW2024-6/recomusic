@@ -25,13 +25,18 @@ class TopController < ApplicationController
     
     def signup
         uid = params[:uid]
+        if uid == 'root'
+          role = 'host'
+        else
+          role = 'user'
+        end
         password = params[:pass]
         history = params[:history]
         practice = params[:practice]
         
         ango = BCrypt::Password.create(password)
         
-        @user = User.create(uid: uid, pass: ango, history: history, practice: practice)
+        @user = User.create(uid: uid, pass: ango, history: history, practice: practice, role: role)
         if @user.save
             redirect_to root_path
         else
