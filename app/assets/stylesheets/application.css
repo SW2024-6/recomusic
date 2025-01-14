@@ -244,3 +244,21 @@ table {
 	width: 100%;
   background-color: #000; /* 緑色 */
 }
+
+.user-id {
+	padding-bottom: 0px;
+	margin-bottom: 0.25em;
+}
+
+.user-experience {
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+}
+
+.my-difficulty {
+	margin-top: 0.25em;
+}
+
+.my-difficulty span {
+	color: #FFCC00;
+}

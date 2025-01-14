@@ -22,10 +22,22 @@
   <%= link_to "コメントを追加", new_comment_path(music_id: @music.id) %>
   <% @comments.each do |c| %>
     <div class="comment">
-      <p><strong>タイトル:</strong> <%= c.title %></p>
-      <p><strong>本文:</strong> <%= c.body %></p>
-      <p><strong>難易度:</strong> <%= c.my_difficulty %></p>
-      <p><strong>ユーザー:</strong> <%= c.user.uid %></p>
+      <div class="user-info">
+        <p class="user-id"><strong><%= c.user.uid %></strong></p>
+        <p class="user-experience"><%= c.user.history %>１日<%= c.user.practice %>時間練習</p>
+      </div>
+      <p class = "my-difficulty">
+      マイ難易度：
+      <% 5.times do |i| %>
+        <% if i < @music.difficulty %>
+          <span class="star-filled">★</span>
+        <% else %>
+          <span class="star-empty">☆</span>
+        <% end %>
+      <% end %>
+      <h4><%= c.title %></h4>
+      </p>
+      <p><%= c.body %></p>
     </div>
   <% end %>
 </div>
