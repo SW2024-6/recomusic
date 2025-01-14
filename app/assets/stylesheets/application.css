@@ -129,6 +129,10 @@ table {
   width: 800px;
 }
 
+table a {
+  text-decoration: none;
+}
+
 /* Comment Section */
 /* コメントセクション全体 */
 .comments-section {
@@ -221,7 +225,7 @@ table {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 影を追加 */
   transition: background-color 0.3s ease, transform 0.2s ease;
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* ボタンのホバー時のアニメーション */
