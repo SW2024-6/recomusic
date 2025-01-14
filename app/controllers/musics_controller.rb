@@ -21,8 +21,14 @@ class MusicsController < ApplicationController
     end
 
     def show
-      @music = Music.find(params[:id])
-      @comments = @music.comments
-      @link = @music.link
+        @music = Music.find(params[:id])
+        @comments = @music.comments
+        @link = @music.link
+    end
+    
+    def destroy
+        music = Music.find(params[:id])
+        music.destroy
+        redirect_to musics_path
     end
 end

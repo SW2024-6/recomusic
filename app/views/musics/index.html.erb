@@ -18,7 +18,7 @@
          <td class="genre"><%= m.genre %></td>
          <td>
          <% if current_user&.host? %>
-             <%= link_to "削除", music_path(m.id), {turbo_method: :delete} %>
+             <%= link_to "削除", music_path(m), data: { turbo_method: :delete } %>
          <% end %>
          </td>
      </tr>
