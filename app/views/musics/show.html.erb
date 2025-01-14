@@ -3,7 +3,15 @@
   <div class="music-info">
     <p><strong>タイトル:</strong> <%= @music.title %></p>
     <p><strong>アーティスト:</strong> <%= @music.artist %></p>
-    <p><strong>難易度:</strong> <%= @music.difficulty %></p>
+    <p><strong>難易度:</strong>
+      <% 5.times do |i| %>
+        <% if i < @music.difficulty %>
+          <span class="star-filled">★</span>
+        <% else %>
+          <span class="star-empty">☆</span>
+        <% end %>
+      <% end %>
+    </p>
     <p><strong>ジャンル:</strong> <%= @music.genre %></p>
   </div>
   <div class="music-links">

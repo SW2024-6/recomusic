@@ -1,27 +1,35 @@
 <h1> 楽曲一覧 </h1>
 <% if current_user&.host? %>
-    <%= link_to '新規追加', new_music_path %>
+  <%= link_to '新規追加', new_music_path %>
 <% end %>
-    
+
 <table align="center">
+  <tr>
+    <th>タイトル</th>
+    <th>アーティスト</th>
+    <th>難易度</th>
+    <th>ジャンル</th>
+  </tr>
+  <% @musics.each do |m| %>
     <tr>
-      <th>タイトル</th>
-      <th>アーティスト</th>
-      <th>難易度</th>
-      <th>ジャンル</th>
+      <td class="title"><%= link_to m.title, music_path(m.id) %></td>
+      <td class="artist"><%= m.artist %></td>
+      <td class="difficulty" align="center">
+        <% 5.times do |i| %>
+          <% if i < m.difficulty %>
+            <span class="star-filled">★</span>
+          <% else %>
+            <span class="star-empty">☆</span>
+          <% end %>
+        <% end %>
+      </td>
+      <td class="genre"><%= m.genre %></td>
+      <td>
+        <% if current_user&.host? %>
+          <%= link_to "削除", music_path(m), data: { turbo_method: :delete } %>
+        <% end %>
+      </td>
     </tr>
-<% @musics.each do |m| %>
-     <tr>
-         <td class="title"><%= link_to m.title, music_path(m.id) %></td>
-         <td class="artist"><%= m.artist %></td>
-         <td class="difficulty" align="center"><%= m.difficulty %></td>
-         <td class="genre"><%= m.genre %></td>
-         <td>
-         <% if current_user&.host? %>
-             <%= link_to "削除", music_path(m), data: { turbo_method: :delete } %>
-         <% end %>
-         </td>
-     </tr>
-<% end %>
+  <% end %>
 </table>
 <%= link_to 'トップに戻る', top_main_path %>
