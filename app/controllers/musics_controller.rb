@@ -28,7 +28,8 @@ class MusicsController < ApplicationController
     
     def destroy
         music = Music.find(params[:id])
+        difficulty = music.difficulty
         music.destroy
-        redirect_to musics_path
+        redirect_to musics_path(difficulty: difficulty)
     end
 end
